@@ -1,0 +1,4 @@
+configuration:
+  env:
+  - name: APPENDER_REF
+    value: "JSON"
