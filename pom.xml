@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.gatelab.microservice.resource01</groupId>
+	<artifactId>resource01</artifactId>
+	<version>4.5.0-SNAPSHOT</version>
+
+	<parent>
+		<groupId>com.intesasanpaolo.alm</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>19</version>
+	</parent>
+
+	<repositories>
+		<repository>
+			<id>resource artifactory </id>
+			<url>http://cvai0apcf1015vs.syssede.systest.sanpaoloimi.com:8081/artifactory/resource-virtual</url>
+			<releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
+			<snapshots><enabled>false</enabled></snapshots>
+		</repository>
+		<repository>
+			<id>resource artifactory snapshot</id>
+			<url>http://cvai0apcf1015vs.syssede.systest.sanpaoloimi.com:8081/artifactory/resource-project-snapshot</url>
+			<releases><enabled>false</enabled></releases>
+			<snapshots><enabled>true</enabled><updatePolicy>always</updatePolicy></snapshots>
+		</repository>		
+		
+	</repositories>
+	
+	<pluginRepositories>
+        <pluginRepository>
+            <id>resource artifactory</id>
+            <url>http://cvai0apcf1015vs.syssede.systest.sanpaoloimi.com:8081/artifactory/resource-virtual</url>
+            <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>resource artifactory snapshot</id>
+            <url>http://cvai0apcf1015vs.syssede.systest.sanpaoloimi.com:8081/artifactory/resource-project-snapshot</url>
+        </pluginRepository>        
+    </pluginRepositories>
+    
+	<scm>
+		<developerConnection>scm:git:https://bitbucket.intesasanpaolo.com/scm/cvai0/resource02.git</developerConnection>
+	</scm>
+	
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<maven.compiler.target>8</maven.compiler.target>
+		<maven.compiler.source>8</maven.compiler.source>
+
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<version.surefire.plugin>2.20</version.surefire.plugin>
+		<fork-jdk>true</fork-jdk>
+		<verbose-jdk>true</verbose-jdk>
+		
+		<diralias.copy.enable>true</diralias.copy.enable>
+		<diralias.dest.path>OPENSHIFT</diralias.dest.path>	
+		
+		<springfox-version>2.9.2</springfox-version>
+		
+		<m2e.apt.activation>jdt_apt</m2e.apt.activation>	
+	</properties>
+
+	<dependencies>
+	
+		<dependency>
+		    <groupId>com.gatelab.cva</groupId>
+		    <artifactId>com.gatelab.cva.xmladapter</artifactId>
+		    <version>2.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.gatelab.markit</groupId>
+		    <artifactId>com.gatelab.markit.lib</artifactId>
+		    <version>2.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.logstash.logback</groupId>
+		    <artifactId>logstash-logback-encoder</artifactId>
+		    <version>6.1</version>
+		</dependency>
+		<!--SpringFox dependencies -->
+		
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mapstruct</groupId>
+					<artifactId>mapstruct</artifactId>
+				</exclusion>
+			</exclusions>				
+		</dependency>
+		
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-bean-validators</artifactId>
+			<version>${springfox-version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.mapstruct</groupId>
+		    <artifactId>mapstruct</artifactId>
+		    <version>1.3.1.Final</version>
+		</dependency>
+		           
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency> 	
+		<!-- DevTools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>2.1.2.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Greenwich.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+	<build>
+
+	    <resources>
+	        <resource>
+	            <directory>src/main/resources</directory>
+	            <filtering>true</filtering>
+	        </resource>
+	    </resources>
+    
+		<plugins>
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.openapitools</groupId> -->
+<!-- 				<artifactId>openapi-generator-maven-plugin</artifactId> -->
+<!-- 				<version>4.0.0</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>swagger-client</id> -->
+<!-- 						<phase>generate-sources</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>generate</goal> -->
+<!-- 						</goals> -->
+<!-- 						<configuration> -->
+<!-- 							<skip>true</skip> -->
+<!-- 							<skipOverwrite>false</skipOverwrite> -->
+<!-- 							<apiPackage>com.gatelab.microservices.pk.core.swagger.client.core.api</apiPackage> -->
+<!-- 							<modelPackage>com.gatelab.microservices.pk.core.swagger.client.core.model</modelPackage> -->
+<!-- 							<generateApiTests>true</generateApiTests> -->
+<!-- 							<inputSpec>${project.basedir}/src/main/resources/core-client.json</inputSpec> -->
+<!-- 							<generatorName>gatelab-spring</generatorName> -->
+<!-- 							<addCompileSourceRoot>true</addCompileSourceRoot> -->
+<!-- 							<generateSupportingFiles>false</generateSupportingFiles> -->
+<!-- 							<configOptions> -->
+<!-- 								<library>spring-cloud</library> -->
+<!-- 								<sourceFolder>src/main/java/</sourceFolder> -->
+<!-- 								<dateLibrary>java8</dateLibrary> -->
+<!-- 							</configOptions> -->
+<!-- 							<output>./</output> -->
+<!-- 						</configuration> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 				<dependencies> -->
+<!-- 					<dependency> -->
+<!-- 						<groupId>com.gatelab.microservices.api-generetor</groupId> -->
+<!-- 						<artifactId>spring-api-generetor</artifactId> -->
+<!-- 						<version>1.0.0</version> -->
+<!-- 					</dependency> -->
+<!-- 				</dependencies> -->
+<!-- 			</plugin>		 -->
+			
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <fork>${fork-jdk}</fork>
+                    <verbose>${verbose-jdk}</verbose>
+			        <annotationProcessorPaths>
+			            <path>
+			                <groupId>org.mapstruct</groupId>
+			                <artifactId>mapstruct-processor</artifactId>
+			                <version>1.3.1.Final</version>
+			            </path>
+			        </annotationProcessorPaths>                        
+                </configuration>
+            </plugin>		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${version.surefire.plugin}</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.1.2.RELEASE</version>
+				<executions>
+					<execution>
+						<id>repackage</id>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>${start-class}</mainClass>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources-conf</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<overwrite>true</overwrite>
+							<outputDirectory>${project.build.directory}/diraliases/CONFIGURATION-FILES</outputDirectory>
+							<resources>
+								<resource>
+									<directory>CONFIGURATION-FILES</directory>
+									<includes>
+										<include>*</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>		
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+			</plugin>
+      <plugin>
+		<groupId>com.gatelab.microservices.util</groupId>
+		<artifactId>util-resource_gitflow_plugin</artifactId>
+		 <configuration>
+<!--          <gitFlowConfig> -->
+<!-- 			<developmentBranch>env/svia</developmentBranch> -->
+<!-- 			<productionBranch>env/svil</productionBranch> -->
+<!-- 			<hotfixBranchPrefix>hotfix/bfix/</hotfixBranchPrefix> -->
+<!-- 			<supportBranchPrefix>master</supportBranchPrefix> -->
+<!-- 		</gitFlowConfig> -->
+         <gitFlowConfig>
+			<developmentBranch>env/svia</developmentBranch>
+			<productionBranch>master</productionBranch>
+			<releaseBranchPrefix>env/svil</releaseBranchPrefix>
+			<hotfixBranchPrefix>hotfix/bfix/</hotfixBranchPrefix>
+		</gitFlowConfig>
+		<commitMessages>
+			<releaseStartMergeMessage>[GitFlow Start Release] @{version}: merge @{developmentBranch} into @{releaseBranchPrefix} @{forceStart}</releaseStartMergeMessage>
+			<releaseFinishMergeMessage>[GitFlow Finish Release] Merge @{version} into @{releaseBranchPrefix}</releaseFinishMergeMessage>
+			<releaseFinishDevMergeMessage>[GitFlow Finish Release] Merge @{version} into @{developmentBranch} </releaseFinishDevMergeMessage>
+		</commitMessages>
+         </configuration>
+      </plugin>			
+		</plugins>
+		    <pluginManagement>
+      <plugins>
+        <plugin>
+    <groupId>com.gatelab.microservices.util</groupId>
+    <artifactId>util-resource_gitflow_plugin</artifactId>
+          <version>1.0.0-SNAPSHOT</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>		
+	</build>
+
+	<profiles>
+		<profile>
+			<id>build-local</id>
+			<properties>
+				<fork-jdk>false</fork-jdk>
+				<verbose-jdk>false</verbose-jdk>				
+			</properties>
+		</profile>	
+	</profiles>
+	
+		
+</project>

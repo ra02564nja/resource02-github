@@ -1,0 +1,4 @@
+configuration:
+  env:
+  - name: spring.profiles.active
+    value: "svil,swagger"    

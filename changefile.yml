@@ -1,0 +1,31 @@
+---
+config:
+  node: "prod && linux"
+
+
+
+build:
+  type: "maven" #available: maven, npm, mobile_android, mobile_ios, no_build
+  jdk_version: "8"
+  mvn_version: "3.3.3"
+  skiptest: true
+  loglevel: "info" # available: info, debug, error
+  pre_action:
+    type: sh # available: bat, powershell, sh
+    command: "ls -la"
+  post_action:
+    type: sh # available: bat, powershell, sh
+    command: "ls -la"
+  automatic_tag: true
+quality:
+  sonar:
+    active: true
+
+deployment:
+  openshift:
+    active: false
+
+notification:
+    email: "snetti@lseg.com" # available: indirizzo email
+    when : failure # available: always
+    
