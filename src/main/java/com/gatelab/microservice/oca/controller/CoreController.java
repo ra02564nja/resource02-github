@@ -28,6 +28,7 @@ public class CoreController {
 	public ResponseEntity<String> gethelloWorld(){
 		/* feat skip update version 2 */
 		logger.info("Hello World");
+		logger.info("logging");
 		return ResponseEntity.ok().body("Hello World");
 	}
 	
