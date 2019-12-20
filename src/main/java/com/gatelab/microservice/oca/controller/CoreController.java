@@ -31,6 +31,7 @@ public class CoreController {
 		logger.info("logging");
 		logger.info("logging2");
 		logger.info("logging3");
+		logger.info("logging rel");
 		return ResponseEntity.ok().body("Hello World");
 	}
 	
