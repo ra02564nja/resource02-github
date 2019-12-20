@@ -4,7 +4,7 @@
 
 	<groupId>com.gatelab.microservice.resource01</groupId>
 	<artifactId>resource01</artifactId>
-	<version>5.0.0-SNAPSHOT</version>
+	<version>5.1.0-SNAPSHOT</version>
 
 	<parent>
 		<groupId>com.intesasanpaolo.alm</groupId>
@@ -329,6 +329,12 @@
 			<hotfixFinishMergeMessage>[FINISH HOTFIX] Merge @{version} into @{productionBranch}</hotfixFinishMergeMessage>
 			<hotfixFinishDevMergeMessage>[FINISH HOTFIX] Merge @{version} into @{developmentBranch}</hotfixFinishDevMergeMessage>
 			<hotfixFinishReleaseMergeMessage>[FINISH HOTFIX] Merge @{version} into @{releaseBranchPrefix}</hotfixFinishReleaseMergeMessage>
+			
+			<updateDevToAvoidConflictsMessage>[FINISH RELEASE] Update develop to production version to avoid merge conflicts</updateDevToAvoidConflictsMessage>
+			<updateDevBackPreMergeStateMessage>[FINISH RELEASE] Update develop version back to pre-merge state</updateDevBackPreMergeStateMessage>
+
+			<updateReleaseToAvoidConflictsMessage>[FINISH HOTFIX] Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
+			<updateReleaseBackPreMergeStateMessage>[FINISH HOTFIX] Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 		</commitMessages>
       </configuration>
       </plugin>			
