@@ -318,9 +318,17 @@
 			<hotfixBranchPrefix>hotfix/bfix/</hotfixBranchPrefix>
 		</gitFlowConfig>
 		<commitMessages>
-			<releaseStartMergeMessage>[GitFlow Start Release] @{version}: merge @{developmentBranch} into @{releaseBranchPrefix} @{forceStart}</releaseStartMergeMessage>
-			<releaseFinishMergeMessage>[GitFlow Finish Release] Merge @{version} into @{releaseBranchPrefix}</releaseFinishMergeMessage>
-			<releaseFinishDevMergeMessage>[GitFlow Finish Release] Merge @{version} into @{developmentBranch} </releaseFinishDevMergeMessage>
+			<releaseStartMergeMessage>[START RELEASE] @{version}: merge @{developmentBranch} into @{releaseBranchPrefix} @{forceStart}</releaseStartMergeMessage>
+			<releaseFinishMergeMessage>[FINISH RELEASE] Merge @{version} into @{releaseBranchPrefix}</releaseFinishMergeMessage>
+			<releaseFinishDevMergeMessage>[FINISH RELEASE] Merge @{version} into @{developmentBranch}</releaseFinishDevMergeMessage>
+			<releaseVersionUpdateMessage>[START RELEASE] Update for next development version</releaseVersionUpdateMessage>
+			
+			<hotfixStartMessage>[START HOTFIX] Update versions for hotfix</hotfixStartMessage>
+			<hotfixFinishMessage>[FINISH HOTFIX] Update for next development version</hotfixFinishMessage>
+			<hotfixVersionUpdateMessage>[FINISH HOTFIX] Update to hotfix version</hotfixVersionUpdateMessage>
+			<hotfixFinishMergeMessage>[FINISH HOTFIX] Merge @{version} into @{productionBranch}<hotfixFinishMergeMessage>
+			<hotfixFinishDevMergeMessage>[FINISH HOTFIX] Merge @{version} into @{developmentBranch}<hotfixFinishDevMergeMessage>
+			<hotfixFinishReleaseMergeMessage>[FINISH HOTFIX] Merge @{version} into @{releaseBranchPrefix}<hotfixFinishReleaseMergeMessage>
 		</commitMessages>
          </configuration>
       </plugin>			
