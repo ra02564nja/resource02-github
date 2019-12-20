@@ -23,7 +23,7 @@ public class CoreController {
 		logger.info("Acquisizione della stringa da Core a Gateway...");
 		return bondProxy.readBondString(idRiga);
 	}
-	/* Prova hotfix */
+	/* Prova hotfix 5.1.1 */
 /* Release 1.30 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
