@@ -331,7 +331,7 @@
 			<hotfixFinishReleaseMergeMessage>[FINISH HOTFIX] Merge @{version} into @{releaseBranchPrefix}</hotfixFinishReleaseMergeMessage>
 			
 			<updateDevToAvoidConflictsMessage>[FINISH RELEASE] Update develop to production version to avoid merge conflicts</updateDevToAvoidConflictsMessage>
-			<updateDevBackPreMergeStateMessag>[FINISH RELEASE] Update develop version back to pre-merge state</updateDevBackPreMergeStateMessag>
+			<updateDevBackPreMergeStateMessage>[FINISH RELEASE] Update develop version back to pre-merge state</updateDevBackPreMergeStateMessage>
 
 			<updateReleaseToAvoidConflictsMessage>[FINISH HOTFIX] Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 			<updateReleaseBackPreMergeStateMessage>[FINISH HOTFIX] Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
