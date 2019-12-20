@@ -4,7 +4,7 @@
 
 	<groupId>com.gatelab.microservice.resource01</groupId>
 	<artifactId>resource01</artifactId>
-	<version>4.5.0-SNAPSHOT</version>
+	<version>5.0.0-SNAPSHOT</version>
 
 	<parent>
 		<groupId>com.intesasanpaolo.alm</groupId>
@@ -318,11 +318,19 @@
 			<hotfixBranchPrefix>hotfix/bfix/</hotfixBranchPrefix>
 		</gitFlowConfig>
 		<commitMessages>
-			<releaseStartMergeMessage>[GitFlow Start Release] @{version}: merge @{developmentBranch} into @{releaseBranchPrefix} @{forceStart}</releaseStartMergeMessage>
-			<releaseFinishMergeMessage>[GitFlow Finish Release] Merge @{version} into @{releaseBranchPrefix}</releaseFinishMergeMessage>
-			<releaseFinishDevMergeMessage>[GitFlow Finish Release] Merge @{version} into @{developmentBranch} </releaseFinishDevMergeMessage>
+			<releaseStartMergeMessage>[START RELEASE] @{version}: merge @{developmentBranch} into @{releaseBranchPrefix} @{forceStart}</releaseStartMergeMessage>
+			<releaseFinishMergeMessage>[FINISH RELEASE] Merge @{version} into @{releaseBranchPrefix}</releaseFinishMergeMessage>
+			<releaseFinishDevMergeMessage>[FINISH RELEASE] Merge @{version} into @{developmentBranch}</releaseFinishDevMergeMessage>
+			<releaseVersionUpdateMessage>[START RELEASE] Update for next development version</releaseVersionUpdateMessage>
+			
+			<hotfixStartMessage>[START HOTFIX] Update versions for hotfix</hotfixStartMessage>
+			<hotfixFinishMessage>[FINISH HOTFIX] Update for next development version</hotfixFinishMessage>
+			<hotfixVersionUpdateMessage>[FINISH HOTFIX] Update to hotfix version</hotfixVersionUpdateMessage>
+			<hotfixFinishMergeMessage>[FINISH HOTFIX] Merge @{version} into @{productionBranch}</hotfixFinishMergeMessage>
+			<hotfixFinishDevMergeMessage>[FINISH HOTFIX] Merge @{version} into @{developmentBranch}</hotfixFinishDevMergeMessage>
+			<hotfixFinishReleaseMergeMessage>[FINISH HOTFIX] Merge @{version} into @{releaseBranchPrefix}</hotfixFinishReleaseMergeMessage>
 		</commitMessages>
-         </configuration>
+      </configuration>
       </plugin>			
 		</plugins>
 		    <pluginManagement>
