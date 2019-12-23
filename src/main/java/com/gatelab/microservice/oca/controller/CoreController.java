@@ -24,6 +24,7 @@ public class CoreController {
 		return bondProxy.readBondString(idRiga);
 	}
 	/* FIX conflitto */
+	/* Gestione conflitto */
 	/* Prova hotfix 5.3.1 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
