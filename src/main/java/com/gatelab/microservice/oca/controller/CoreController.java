@@ -26,11 +26,11 @@ public class CoreController {
 	/* FIX conflitto */
 	/* Gestione conflitto */
 	/* Commento inutile */
-	/* Prova hotfix 5.3.1 */
+	/* Prova hotfix 5.3.2 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
 		logger.info("Hello World");
-		logger.info("logging v5.5.0");
+		logger.info("logging v5.5.0 release");
 		return ResponseEntity.ok().body("Hello World");
 	}
 	
