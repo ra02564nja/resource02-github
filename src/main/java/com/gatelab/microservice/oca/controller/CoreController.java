@@ -25,8 +25,6 @@ public class CoreController {
 	}
 	/* FIX conflitto */
 	/* Gestione conflitto */
-	/* Sviluppo su svia */
-	/* Altro Sviluppo su svia */
 	/* Prova hotfix 5.3.2 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
@@ -34,6 +32,5 @@ public class CoreController {
 		logger.info("logging v5.6.0 release");
 		return ResponseEntity.ok().body("Hello World");
 	}
-	
-	/* Nuovo sviluppo su svia */
+
 }
