@@ -25,7 +25,7 @@ public class CoreController {
 	}
 	/* FIX conflitto */
 	/* Gestione conflitto */
-	/* Prova hotfix 5.3.2 */
+	/* Prova hotfix 5.7.1 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
 		logger.info("Hello World");
