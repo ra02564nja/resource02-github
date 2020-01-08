@@ -35,5 +35,5 @@ public class CoreController {
 		return ResponseEntity.ok().body("Hello World");
 	}
 	
-	
+	/* Nuovo sviluppo su svia */
 }
