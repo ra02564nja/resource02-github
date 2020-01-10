@@ -30,5 +30,7 @@ public class CoreController {
 		logger.info("logging v5.6.0 release");
 		return ResponseEntity.ok().body("Hello World");
 	}
+	
+	/* Sviluppo 5.8.0 */
 
 }
