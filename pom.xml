@@ -317,7 +317,7 @@
 			<releaseBranchPrefix>env/svil</releaseBranchPrefix>
 			<hotfixBranchPrefix>hotfix/bfix/</hotfixBranchPrefix>
 		</gitFlowConfig>
-		<commitMessages>
+		<!--<commitMessages>
 			<releaseStartMergeMessage>[START RELEASE] @{version}: merge @{developmentBranch} into @{releaseBranchPrefix} @{forceStart}</releaseStartMergeMessage>
 			<releaseFinishMergeMessage>[FINISH RELEASE] Merge @{version} into @{releaseBranchPrefix}</releaseFinishMergeMessage>
 			<releaseFinishDevMergeMessage>[FINISH RELEASE] Merge @{version} into @{developmentBranch}</releaseFinishDevMergeMessage>
@@ -335,7 +335,7 @@
 
 			<updateReleaseToAvoidConflictsMessage>[FINISH HOTFIX] Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 			<updateReleaseBackPreMergeStateMessage>[FINISH HOTFIX] Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
-		</commitMessages>
+		</commitMessages>-->
       </configuration>
       </plugin>			
 		</plugins>
