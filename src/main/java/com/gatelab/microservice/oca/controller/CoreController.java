@@ -24,6 +24,7 @@ public class CoreController {
 		return bondProxy.readBondString(idRiga);
 	}
 	
+	/* rel branch */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
 		logger.info("Hello World");
