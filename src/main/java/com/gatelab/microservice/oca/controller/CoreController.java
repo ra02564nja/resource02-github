@@ -23,14 +23,14 @@ public class CoreController {
 		logger.info("Acquisizione della stringa da Core a Gateway...");
 		return bondProxy.readBondString(idRiga);
 	}
-	/* Prova hotfix 5.7.4 */
+	
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
 		logger.info("Hello World");
-		logger.info("logging v5.9.0 release + sviluppo + conflitto");
+		logger.info("logging v6.1.0");
 		return ResponseEntity.ok().body("Hello World");
 	}
 	
-	/* Sviluppo 5.8.0 */
+	/* Sviluppo 6.0.0 ?*/
 
 }
