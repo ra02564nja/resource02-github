@@ -31,6 +31,6 @@ public class CoreController {
 		return ResponseEntity.ok().body("Hello World");
 	}
 	
-	/* Sviluppo 5.8.0 */
+	/* Sviluppo 6.0.0 ?*/
 
 }
