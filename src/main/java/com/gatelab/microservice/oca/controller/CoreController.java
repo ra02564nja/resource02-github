@@ -29,7 +29,6 @@ public class CoreController {
 	public ResponseEntity<String> gethelloWorld(){
 		logger.info("Hello World");
 		logger.info("logging v7.1.0"); /* 7.1.0 */
-		logger.info("logging v7.0.0"); /* 7.0.0 */
 		return ResponseEntity.ok().body("Hello World");
 	}
 
