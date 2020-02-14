@@ -30,6 +30,7 @@ public class CoreController {
 		logger.info("Hello World");
 		logger.info("logging v7.1.0"); /* 7.1.0 */
 		logger.info("logging2 v7.1.0");
+		logger.info("logging3 v7.1.0");
 		return ResponseEntity.ok().body("Hello World");
 	}
 
