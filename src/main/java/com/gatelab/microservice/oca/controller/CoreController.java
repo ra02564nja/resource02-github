@@ -27,7 +27,7 @@ public class CoreController {
 	/* rel branch */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
-		logger.info("Hello World");
+		logger.info("Hello World BFIX 6.1.1");
 		logger.info("logging v6.1.0"); /* 6.1.0 */
 		return ResponseEntity.ok().body("Hello World");
 	}
