@@ -318,7 +318,7 @@
 			<hotfixBranchPrefix>hotfix/bfix/</hotfixBranchPrefix>
 		</gitFlowConfig>
 		<resourceConfig>
-			<versionFileName>oca-core</versionFileName>
+			<versioningRepoProject>oca-core</versioningRepoProject>
 		</resourceConfig>
 		<!--<commitMessages>
 			<releaseStartMergeMessage>[START RELEASE] @{version}: merge @{developmentBranch} into @{releaseBranchPrefix} @{forceStart}</releaseStartMergeMessage>
