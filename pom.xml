@@ -4,7 +4,7 @@
 
 	<groupId>com.gatelab.microservice.resource01</groupId>
 	<artifactId>resource01</artifactId>
-	<version>7.1.0-SNAPSHOT</version>
+	<version>7.2.0-SNAPSHOT</version>
 
 	<parent>
 		<groupId>com.intesasanpaolo.alm</groupId>
@@ -317,6 +317,9 @@
 			<releaseBranchPrefix>env/svil</releaseBranchPrefix>
 			<hotfixBranchPrefix>hotfix/bfix/</hotfixBranchPrefix>
 		</gitFlowConfig>
+		<resourceConfig>
+			<versionFileName>oca-core</versionFileName>
+		</resourceConfig>
 		<!--<commitMessages>
 			<releaseStartMergeMessage>[START RELEASE] @{version}: merge @{developmentBranch} into @{releaseBranchPrefix} @{forceStart}</releaseStartMergeMessage>
 			<releaseFinishMergeMessage>[FINISH RELEASE] Merge @{version} into @{releaseBranchPrefix}</releaseFinishMergeMessage>
