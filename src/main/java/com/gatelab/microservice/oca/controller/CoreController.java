@@ -27,10 +27,10 @@ public class CoreController {
 	/* rel branch */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
-		logger.info("Hello World");
-		logger.info("logging v7.0.0");
-		logger.info("logging2 v7.0.0");
-		logger.info("logging3 v7.0.0");
+		logger.info("Hello World SVIA");
+		logger.info("logging v7.1.0"); /* 7.1.0 */
+		logger.info("logging2 v7.1.0");
+		logger.info("logging3 v7.1.0");
 		return ResponseEntity.ok().body("Hello World");
 	}
 
