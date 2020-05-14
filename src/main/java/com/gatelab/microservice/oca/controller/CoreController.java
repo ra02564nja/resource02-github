@@ -25,7 +25,7 @@ public class CoreController {
 	}
 	
 	/* rel branch */
-	/* svia post feat1 */
+	/* svia post newfeat3 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
 		logger.info("Hello World SVIA");
