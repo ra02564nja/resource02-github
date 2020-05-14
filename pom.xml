@@ -4,7 +4,7 @@
 
 	<groupId>com.gatelab.microservice.resource01</groupId>
 	<artifactId>resource01</artifactId>
-	<version>8.2.0-SNAPSHOT</version>
+	<version>8.2.0-newfeat1-SNAPSHOT</version>
 
 	<parent>
 		<groupId>com.intesasanpaolo.alm</groupId>
