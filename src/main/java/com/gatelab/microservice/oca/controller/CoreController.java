@@ -26,6 +26,7 @@ public class CoreController {
 	
 	/* svia post newfeat1 */
 	/* svia post newfeat1 merge */
+	/* svia post newfeat2 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
 		logger.info("Hello World SVIA");
