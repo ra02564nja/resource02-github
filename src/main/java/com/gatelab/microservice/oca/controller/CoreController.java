@@ -24,7 +24,6 @@ public class CoreController {
 		return bondProxy.readBondString(idRiga);
 	}
 	
-	/* rel branch */
 	/* svia post newfeat1 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
