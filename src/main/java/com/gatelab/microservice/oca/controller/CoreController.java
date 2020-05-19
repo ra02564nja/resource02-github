@@ -26,15 +26,23 @@ public class CoreController {
 	
 	/* svia post newfeat1 */
 	/* svia post newfeat1 merge */
+	/* svia post newfeat2 */
 	@RequestMapping(value="/helloWorld", method = RequestMethod.GET)
 	public ResponseEntity<String> gethelloWorld(){
 		logger.info("Hello World SVIA");
 		logger.info("logging v7.1.0"); /* 7.1.0 */
 		logger.info("logging2 v7.1.0");
 		logger.info("logging3 v7.1.0");
-		logger.info("newfeat3");
+		logger.info("feat 19 mag");
 		return ResponseEntity.ok().body("Hello World");
 	}
+	
+	/* per conflitto feat 19 mag */
+	/* per conflitto svia 19 mag */
 
+	/* per conflitto2 svia 19 mag */
+	/* per conflitto2 feat 19 mag */
+	
+	/* per conflitto3 svia 19 mag */
 
 }
