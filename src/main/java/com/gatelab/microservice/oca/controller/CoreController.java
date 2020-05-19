@@ -39,6 +39,7 @@ public class CoreController {
 	
 	/* per conflitto feat 19 mag */
 	/* per conflitto svia 19 mag */
+	/* per conflitto2 svia 19 mag */
 
 
 }
