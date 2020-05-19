@@ -36,6 +36,8 @@ public class CoreController {
 		logger.info("newfeat3");
 		return ResponseEntity.ok().body("Hello World");
 	}
+	
+	/* per conflitto feat 19 mag */
 
 
 }
