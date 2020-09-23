@@ -18,5 +18,4 @@ public class CoreApplication {
 		SpringApplication.run(CoreApplication.class, args);
 	}
 
-/*TEST REVERT*/
 }
