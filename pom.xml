@@ -59,7 +59,7 @@
 		<diralias.copy.enable>true</diralias.copy.enable>
 		<diralias.dest.path>OPENSHIFT</diralias.dest.path>	
 		
-		<springfox-version>2.9.2</springfox-version>
+		<springfox-version>2.10.0</springfox-version>
 		
 		<m2e.apt.activation>jdt_apt</m2e.apt.activation>	
 	</properties>
